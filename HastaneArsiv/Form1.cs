@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HastaneArsiv.Util;
+using HospitalAutomation.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +13,8 @@ namespace HastaneArsiv
 {
     public partial class Form1 : Form
     {
+        ErrorTracker eTracker;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +31,9 @@ namespace HastaneArsiv
         {
             tvKayit.ExpandAll();
             RaporKontrol();
+
+            eTracker = new ErrorTracker(errorProviderHomePage);
+            errorProviderHomePage.BlinkStyle = ErrorBlinkStyle.NeverBlink;
         }
 
         #region Tarama Metotları
@@ -280,5 +287,50 @@ namespace HastaneArsiv
             }
         }
 
+        /// change kontrol
+        /// 
+        private void txtTcNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        
+
+        private void txtTcNo_TextChanged(object sender, EventArgs e)
+        {
+            errorProviderHomePage.Clear();
+
+            bool istxtTcNoFieldEmpty = string.IsNullOrWhiteSpace(txtTcNo.Text);
+            
+
+            if (istxtTcNoFieldEmpty || txtTcNo.TextLength != 11)
+            {
+                eTracker.SetError(txtTcNo, Constants.Errors.INVALID);
+            }
+
+
+            try
+            {
+                bool result = Functions.TCNoKontrolu(txtTcNo.Text); 
+                if(result ==  false)
+                {
+                    eTracker.SetError(txtTcNo, "Geçersiz TC No");
+                }
+            }
+            catch (Exception)
+            {
+                eTracker.SetError(txtTcNo, "Geçersiz TC No");                
+            }
+        }
+
+        // Tarihlerin Kontrolü
+        private void dtpKapanisTarih_ValueChanged(object sender, EventArgs e)
+        {
+            errorProviderHomePage.Clear();
+            if(dtpKapanisTarih.Value < dtpTarih.Value)
+            {
+                eTracker.SetError(dtpKapanisTarih, "Açılış Tarihinden Sonraki Günlerden Seçiniz !");
+            }
+
+        }        
     }
 }

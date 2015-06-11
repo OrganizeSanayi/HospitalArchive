@@ -111,6 +111,7 @@
             this.txtTcNo = new System.Windows.Forms.TextBox();
             this.txtDosyaNo = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pbResim = new System.Windows.Forms.PictureBox();
             this.flpResimler = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblRaporBilgi = new System.Windows.Forms.Label();
@@ -126,7 +127,7 @@
             this.öğretimÜyesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bölümToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ofdDigital = new System.Windows.Forms.OpenFileDialog();
-            this.pbResim = new System.Windows.Forms.PictureBox();
+            this.errorProviderHomePage = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -134,10 +135,11 @@
             this.pHastaStatu.SuspendLayout();
             this.gbDosya.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderHomePage)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -187,7 +189,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(418, 483);
+            this.panel2.Size = new System.Drawing.Size(435, 483);
             this.panel2.TabIndex = 1;
             // 
             // gbKayit
@@ -211,7 +213,7 @@
             this.gbKayit.Location = new System.Drawing.Point(10, 107);
             this.gbKayit.Margin = new System.Windows.Forms.Padding(0);
             this.gbKayit.Name = "gbKayit";
-            this.gbKayit.Size = new System.Drawing.Size(398, 368);
+            this.gbKayit.Size = new System.Drawing.Size(415, 368);
             this.gbKayit.TabIndex = 1;
             this.gbKayit.TabStop = false;
             this.gbKayit.Text = "Kayıt Bilgisi";
@@ -258,7 +260,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(19, 177);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 18);
+            this.label6.Size = new System.Drawing.Size(92, 18);
             this.label6.TabIndex = 15;
             this.label6.Text = "H. Tanısı :";
             // 
@@ -267,7 +269,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 140);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 18);
+            this.label7.Size = new System.Drawing.Size(105, 18);
             this.label7.TabIndex = 14;
             this.label7.Text = "Öğr. Üyesi :";
             // 
@@ -278,13 +280,14 @@
             this.dtpKapanisTarih.Name = "dtpKapanisTarih";
             this.dtpKapanisTarih.Size = new System.Drawing.Size(269, 27);
             this.dtpKapanisTarih.TabIndex = 1;
+            this.dtpKapanisTarih.ValueChanged += new System.EventHandler(this.dtpKapanisTarih_ValueChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(5, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 18);
+            this.label4.Size = new System.Drawing.Size(106, 18);
             this.label4.TabIndex = 13;
             this.label4.Text = "Kapanış T. :";
             // 
@@ -293,7 +296,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(27, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 18);
+            this.label5.Size = new System.Drawing.Size(84, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "Açılış T. :";
             // 
@@ -311,7 +314,7 @@
             this.rbYatan.AutoSize = true;
             this.rbYatan.Location = new System.Drawing.Point(117, 3);
             this.rbYatan.Name = "rbYatan";
-            this.rbYatan.Size = new System.Drawing.Size(74, 22);
+            this.rbYatan.Size = new System.Drawing.Size(73, 22);
             this.rbYatan.TabIndex = 5;
             this.rbYatan.Text = "Yatan";
             this.rbYatan.UseVisualStyleBackColor = true;
@@ -348,6 +351,7 @@
             // 
             this.txtHastaTanisi.Enabled = false;
             this.txtHastaTanisi.Location = new System.Drawing.Point(123, 174);
+            this.txtHastaTanisi.MaxLength = 25;
             this.txtHastaTanisi.Name = "txtHastaTanisi";
             this.txtHastaTanisi.Size = new System.Drawing.Size(269, 27);
             this.txtHastaTanisi.TabIndex = 4;
@@ -370,7 +374,7 @@
             this.gbDosya.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gbDosya.Location = new System.Drawing.Point(10, 10);
             this.gbDosya.Name = "gbDosya";
-            this.gbDosya.Size = new System.Drawing.Size(398, 97);
+            this.gbDosya.Size = new System.Drawing.Size(415, 97);
             this.gbDosya.TabIndex = 0;
             this.gbDosya.TabStop = false;
             this.gbDosya.Text = "Dosya Bilgisi";
@@ -378,7 +382,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 62);
+            this.label2.Location = new System.Drawing.Point(43, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 18);
             this.label2.TabIndex = 11;
@@ -387,7 +391,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 29);
+            this.label1.Location = new System.Drawing.Point(14, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 10;
@@ -398,14 +402,18 @@
             this.txtTcNo.BackColor = System.Drawing.Color.RoyalBlue;
             this.txtTcNo.Enabled = false;
             this.txtTcNo.Location = new System.Drawing.Point(123, 26);
+            this.txtTcNo.MaxLength = 11;
             this.txtTcNo.Name = "txtTcNo";
             this.txtTcNo.Size = new System.Drawing.Size(269, 27);
             this.txtTcNo.TabIndex = 9;
+            this.txtTcNo.TextChanged += new System.EventHandler(this.txtTcNo_TextChanged);
+            this.txtTcNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTcNo_KeyPress);
             // 
             // txtDosyaNo
             // 
             this.txtDosyaNo.Enabled = false;
             this.txtDosyaNo.Location = new System.Drawing.Point(123, 59);
+            this.txtDosyaNo.MaxLength = 25;
             this.txtDosyaNo.Name = "txtDosyaNo";
             this.txtDosyaNo.Size = new System.Drawing.Size(269, 27);
             this.txtDosyaNo.TabIndex = 8;
@@ -423,6 +431,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(529, 483);
             this.panel3.TabIndex = 2;
+            // 
+            // pbResim
+            // 
+            this.pbResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbResim.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbResim.Location = new System.Drawing.Point(99, 28);
+            this.pbResim.Name = "pbResim";
+            this.pbResim.Size = new System.Drawing.Size(428, 404);
+            this.pbResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbResim.TabIndex = 10;
+            this.pbResim.TabStop = false;
             // 
             // flpResimler
             // 
@@ -661,16 +680,9 @@
             this.ofdDigital.FileName = "openFileDialog1";
             this.ofdDigital.Multiselect = true;
             // 
-            // pbResim
+            // errorProviderHomePage
             // 
-            this.pbResim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbResim.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbResim.Location = new System.Drawing.Point(99, 28);
-            this.pbResim.Name = "pbResim";
-            this.pbResim.Size = new System.Drawing.Size(428, 404);
-            this.pbResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbResim.TabIndex = 10;
-            this.pbResim.TabStop = false;
+            this.errorProviderHomePage.ContainerControl = this;
             // 
             // Form1
             // 
@@ -696,12 +708,13 @@
             this.gbDosya.ResumeLayout(false);
             this.gbDosya.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderHomePage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -729,7 +742,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ayarlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tanıBilgisiToolStripMenuItem;
-        private System.Windows.Forms.OpenFileDialog ofdDigital;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnPc;
@@ -754,6 +766,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem öğretimÜyesiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bölümToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog ofdDigital;
+        private System.Windows.Forms.ErrorProvider errorProviderHomePage;
     }
 }
 

@@ -54,7 +54,10 @@ namespace HastaneArsiv
                 if (e.KeyChar == (char)Keys.Enter)
                 {
                     if (lbOgretimUyesi.SelectedItem != null)
+                    {
                         ((Form1)Application.OpenForms["Form1"]).txtOgretimUyesi.Text = lbOgretimUyesi.SelectedItem.ToString();
+                        this.Close();
+                    }
                     else
                         this.Close();
                 }
@@ -78,6 +81,11 @@ namespace HastaneArsiv
             {
                 MessageBox.Show(exp.Message);
             }
+        }
+
+        private void OgretimUyesi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

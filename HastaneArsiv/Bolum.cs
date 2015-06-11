@@ -54,7 +54,10 @@ namespace HastaneArsiv
                 if (e.KeyChar == (char)Keys.Enter)
                 {
                     if (lbBolum.SelectedItem != null)
+                    {
                         ((Form1)Application.OpenForms["Form1"]).txtBolum.Text = lbBolum.SelectedItem.ToString();
+                        this.Close();
+                    }
                     else
                         this.Close();
                 }
@@ -70,6 +73,19 @@ namespace HastaneArsiv
         private void Bolum_Load(object sender, EventArgs e)
         {
             // Db den verileri çek.
+        }
+
+        private void lbBolum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lbBolum.SelectedItem != null)
+                    lbBolum.Text = lbBolum.SelectedItem.ToString();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
     }
 }

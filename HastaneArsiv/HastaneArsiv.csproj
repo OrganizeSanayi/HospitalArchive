@@ -97,6 +97,10 @@
     <Compile Include="TaniBilgisi.Designer.cs">
       <DependentUpon>TaniBilgisi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\Constants.cs" />
+    <Compile Include="Util\ErrorTracker.cs" />
+    <Compile Include="Util\Functions.cs" />
+    <Compile Include="Util\Logger.cs" />
     <Compile Include="WIAScanner.cs" />
     <EmbeddedResource Include="Bolum.resx">
       <DependentUpon>Bolum.cs</DependentUpon>

@@ -47,31 +47,35 @@
             // lbOgretimUyesi
             // 
             this.lbOgretimUyesi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbOgretimUyesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOgretimUyesi.FormattingEnabled = true;
+            this.lbOgretimUyesi.ItemHeight = 16;
             this.lbOgretimUyesi.Items.AddRange(new object[] {
             "Yrd. Doç. Dr. Suhap ŞAHİN",
             "Arş. Gör. Hikmetcan ÖZCAN"});
-            this.lbOgretimUyesi.Location = new System.Drawing.Point(0, 44);
+            this.lbOgretimUyesi.Location = new System.Drawing.Point(0, 53);
             this.lbOgretimUyesi.Name = "lbOgretimUyesi";
-            this.lbOgretimUyesi.Size = new System.Drawing.Size(292, 173);
+            this.lbOgretimUyesi.Size = new System.Drawing.Size(292, 164);
             this.lbOgretimUyesi.TabIndex = 1;
             this.lbOgretimUyesi.SelectedIndexChanged += new System.EventHandler(this.lbOgretimUyesi_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(133, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seçilen Öğr. Üyesi :";
             // 
             // lblOgretimUyesi
             // 
             this.lblOgretimUyesi.AutoSize = true;
-            this.lblOgretimUyesi.Location = new System.Drawing.Point(99, 23);
+            this.lblOgretimUyesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOgretimUyesi.Location = new System.Drawing.Point(136, 25);
             this.lblOgretimUyesi.Name = "lblOgretimUyesi";
-            this.lblOgretimUyesi.Size = new System.Drawing.Size(0, 13);
+            this.lblOgretimUyesi.Size = new System.Drawing.Size(0, 17);
             this.lblOgretimUyesi.TabIndex = 3;
             // 
             // OgretimUyesi
@@ -84,7 +88,8 @@
             this.Controls.Add(this.lbOgretimUyesi);
             this.Controls.Add(this.txtOgretimUye);
             this.Name = "OgretimUyesi";
-            this.Text = "Öğretim Üyesi Seçiniz !";
+            this.Text = "Öğretim Üyesi Seçiniz ";
+            this.Load += new System.EventHandler(this.OgretimUyesi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
