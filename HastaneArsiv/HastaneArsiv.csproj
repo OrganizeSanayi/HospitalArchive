@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79333F9F-57F6-4335-B1F6-60A1687489F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HastaneArsiv</RootNamespace>
+    <AssemblyName>Ayarlar</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.WIA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Scanner\Interop.WIA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bolum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bolum.Designer.cs">
+      <DependentUpon>Bolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OgretimUyesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgretimUyesi.Designer.cs">
+      <DependentUpon>OgretimUyesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgretimUyesiTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgretimUyesiTanim.Designer.cs">
+      <DependentUpon>OgretimUyesiTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanners.Designer.cs">
+      <DependentUpon>Scanners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaniBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaniBilgisi.Designer.cs">
+      <DependentUpon>TaniBilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIAScanner.cs" />
+    <EmbeddedResource Include="Bolum.resx">
+      <DependentUpon>Bolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgretimUyesi.resx">
+      <DependentUpon>OgretimUyesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgretimUyesiTanim.resx">
+      <DependentUpon>OgretimUyesiTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Scanners.resx">
+      <DependentUpon>Scanners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaniBilgisi.resx">
+      <DependentUpon>TaniBilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <EntityDeploy Include="HastaneModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HastaneModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomePageBanner.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrysanthemum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desert.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hydrangeas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jellyfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Koala.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lighthouse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penguins.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tulips.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_256.png" />
+    <None Include="Resources\icd10codes.png" />
+    <Content Include="Scanner\Interop.WIA.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

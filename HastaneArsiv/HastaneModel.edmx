@@ -1,0 +1,1079 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HastaneArsivModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="HastaneArsivModelStoreContainer">
+          <EntitySet Name="ADLISAGLIKKURULU" EntityType="HastaneArsivModel.Store.ADLISAGLIKKURULU" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ADLISAGLIKKURULURESIMLER" EntityType="HastaneArsivModel.Store.ADLISAGLIKKURULURESIMLER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ADLISAGLIKKURULUYOL" EntityType="HastaneArsivModel.Store.ADLISAGLIKKURULUYOL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BOLUMLER" EntityType="HastaneArsivModel.Store.BOLUMLER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DOSYALAR" EntityType="HastaneArsivModel.Store.DOSYALAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HASTALAR" EntityType="HastaneArsivModel.Store.HASTALAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MUAYENEEPIKRIZ" EntityType="HastaneArsivModel.Store.MUAYENEEPIKRIZ" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MUAYENEEPIKRIZRESIMLER" EntityType="HastaneArsivModel.Store.MUAYENEEPIKRIZRESIMLER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MUAYENEEPIKRIZYOL" EntityType="HastaneArsivModel.Store.MUAYENEEPIKRIZYOL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OGRETIMUYELERİ" EntityType="HastaneArsivModel.Store.OGRETIMUYELERİ" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OTURUM" EntityType="HastaneArsivModel.Store.OTURUM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="STATU" EntityType="HastaneArsivModel.Store.STATU" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TANILAR" EntityType="HastaneArsivModel.Store.TANILAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TETKIKRAPORLAR" EntityType="HastaneArsivModel.Store.TETKIKRAPORLAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TETKIKRAPORRESIMLER" EntityType="HastaneArsivModel.Store.TETKIKRAPORRESIMLER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TETKIKRAPORYOL" EntityType="HastaneArsivModel.Store.TETKIKRAPORYOL" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL" Association="HastaneArsivModel.Store.FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL">
+            <End Role="ADLISAGLIKKURULUYOL" EntitySet="ADLISAGLIKKURULUYOL" />
+            <End Role="ADLISAGLIKKURULURESIMLER" EntitySet="ADLISAGLIKKURULURESIMLER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_ADLISAGLIKKURULU" Association="HastaneArsivModel.Store.FK_DOSYALAR_ADLISAGLIKKURULU">
+            <End Role="ADLISAGLIKKURULU" EntitySet="ADLISAGLIKKURULU" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_ADLISAGLIKKURULUYOL" Association="HastaneArsivModel.Store.FK_DOSYALAR_ADLISAGLIKKURULUYOL">
+            <End Role="ADLISAGLIKKURULUYOL" EntitySet="ADLISAGLIKKURULUYOL" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_BOLUMLER" Association="HastaneArsivModel.Store.FK_DOSYALAR_BOLUMLER">
+            <End Role="BOLUMLER" EntitySet="BOLUMLER" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_MUAYENEEPIKRIZ" Association="HastaneArsivModel.Store.FK_DOSYALAR_MUAYENEEPIKRIZ">
+            <End Role="MUAYENEEPIKRIZ" EntitySet="MUAYENEEPIKRIZ" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_MUAYENEEPIKRIZYOL" Association="HastaneArsivModel.Store.FK_DOSYALAR_MUAYENEEPIKRIZYOL">
+            <End Role="MUAYENEEPIKRIZYOL" EntitySet="MUAYENEEPIKRIZYOL" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_OGRETIMUYELERİ" Association="HastaneArsivModel.Store.FK_DOSYALAR_OGRETIMUYELERİ">
+            <End Role="OGRETIMUYELERİ" EntitySet="OGRETIMUYELERİ" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_STATU" Association="HastaneArsivModel.Store.FK_DOSYALAR_STATU">
+            <End Role="STATU" EntitySet="STATU" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_TANILAR1" Association="HastaneArsivModel.Store.FK_DOSYALAR_TANILAR1">
+            <End Role="TANILAR" EntitySet="TANILAR" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_TETKIKRAPORLAR" Association="HastaneArsivModel.Store.FK_DOSYALAR_TETKIKRAPORLAR">
+            <End Role="TETKIKRAPORLAR" EntitySet="TETKIKRAPORLAR" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_YOLLAR" Association="HastaneArsivModel.Store.FK_DOSYALAR_YOLLAR">
+            <End Role="TETKIKRAPORYOL" EntitySet="TETKIKRAPORYOL" />
+            <End Role="DOSYALAR" EntitySet="DOSYALAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL" Association="HastaneArsivModel.Store.FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL">
+            <End Role="MUAYENEEPIKRIZYOL" EntitySet="MUAYENEEPIKRIZYOL" />
+            <End Role="MUAYENEEPIKRIZRESIMLER" EntitySet="MUAYENEEPIKRIZRESIMLER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESIMLER_YOLLAR" Association="HastaneArsivModel.Store.FK_RESIMLER_YOLLAR">
+            <End Role="TETKIKRAPORYOL" EntitySet="TETKIKRAPORYOL" />
+            <End Role="TETKIKRAPORRESIMLER" EntitySet="TETKIKRAPORRESIMLER" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ADLISAGLIKKURULU">
+          <Key>
+            <PropertyRef Name="AdliSaglikKuruluID" />
+          </Key>
+          <Property Name="AdliSaglikKuruluID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdliSaglikKurulu" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ADLISAGLIKKURULURESIMLER">
+          <Key>
+            <PropertyRef Name="AdliSaglikKuruluResimID" />
+          </Key>
+          <Property Name="AdliSaglikKuruluResimID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdliSaglikKuruluYolID" Type="int" Nullable="false" />
+          <Property Name="AdliSaglikKuruluResim" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ADLISAGLIKKURULUYOL">
+          <Key>
+            <PropertyRef Name="AdliSaglikKuruluYolID" />
+          </Key>
+          <Property Name="AdliSaglikKuruluYolID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdliSaglikKuruluYolKayit" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BOLUMLER">
+          <Key>
+            <PropertyRef Name="Bolumid" />
+          </Key>
+          <Property Name="Bolumid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BolumAdı" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DOSYALAR">
+          <Key>
+            <PropertyRef Name="DosyaID" />
+          </Key>
+          <Property Name="DosyaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DosyaNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="BolumID" Type="int" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="OgretimUyeID" Type="int" Nullable="false" />
+          <Property Name="TanıID" Type="int" Nullable="false" />
+          <Property Name="HastaStatuID" Type="int" Nullable="false" />
+          <Property Name="MuayeneEpikrizID" Type="int" Nullable="false" />
+          <Property Name="MuayeneEpikrizYolID" Type="int" Nullable="false" />
+          <Property Name="TetkikRaporID" Type="int" Nullable="false" />
+          <Property Name="TetkikRaporYolID" Type="int" Nullable="false" />
+          <Property Name="AdliSaglikKuruluID" Type="int" Nullable="false" />
+          <Property Name="AdliSaglikKuruluYolID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HASTALAR">
+          <Key>
+            <PropertyRef Name="TcKimlikNo" />
+          </Key>
+          <Property Name="TcKimlikNo" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="DosyaNumarası" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Ad" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Soyad" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MUAYENEEPIKRIZ">
+          <Key>
+            <PropertyRef Name="Muayeneid" />
+          </Key>
+          <Property Name="Muayeneid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HastaMuayeneEpikriz" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MUAYENEEPIKRIZRESIMLER">
+          <Key>
+            <PropertyRef Name="MuayeneEpikrizResimID" />
+          </Key>
+          <Property Name="MuayeneEpikrizResimID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MuayeneEpikrizYolID" Type="int" Nullable="false" />
+          <Property Name="MuayeneRaporResimAd" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MUAYENEEPIKRIZYOL">
+          <Key>
+            <PropertyRef Name="MuayeneEpikrizYolID" />
+          </Key>
+          <Property Name="MuayeneEpikrizYolID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MuayeneEpikrizYolKayit" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OGRETIMUYELERİ">
+          <Key>
+            <PropertyRef Name="OgretimUyeid" />
+          </Key>
+          <Property Name="OgretimUyeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Soyad" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Unvan" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="OTURUM">
+          <Key>
+            <PropertyRef Name="KullaniciAdi" />
+          </Key>
+          <Property Name="KullaniciAdi" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sifre" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="STATU">
+          <Key>
+            <PropertyRef Name="Statuid" />
+          </Key>
+          <Property Name="Statuid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Statu" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TANILAR">
+          <Key>
+            <PropertyRef Name="Taniid" />
+          </Key>
+          <Property Name="Taniid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaniAdi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ICD10Kodu" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TETKIKRAPORLAR">
+          <Key>
+            <PropertyRef Name="TetkikRaporid" />
+          </Key>
+          <Property Name="TetkikRaporid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TetkikveRapor" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TETKIKRAPORRESIMLER">
+          <Key>
+            <PropertyRef Name="TetkikRaporResimID" />
+          </Key>
+          <Property Name="TetkikRaporResimID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TetkikRaporYolID" Type="int" Nullable="false" />
+          <Property Name="TetkikRaporResimAd" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TETKIKRAPORYOL">
+          <Key>
+            <PropertyRef Name="TetkikRaporYolID" />
+          </Key>
+          <Property Name="TetkikRaporYolID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TetkikRaporYolKayit" Type="text" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL">
+          <End Role="ADLISAGLIKKURULUYOL" Type="HastaneArsivModel.Store.ADLISAGLIKKURULUYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ADLISAGLIKKURULURESIMLER" Type="HastaneArsivModel.Store.ADLISAGLIKKURULURESIMLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADLISAGLIKKURULUYOL">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Principal>
+            <Dependent Role="ADLISAGLIKKURULURESIMLER">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_ADLISAGLIKKURULU">
+          <End Role="ADLISAGLIKKURULU" Type="HastaneArsivModel.Store.ADLISAGLIKKURULU" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADLISAGLIKKURULU">
+              <PropertyRef Name="AdliSaglikKuruluID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="AdliSaglikKuruluID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_ADLISAGLIKKURULUYOL">
+          <End Role="ADLISAGLIKKURULUYOL" Type="HastaneArsivModel.Store.ADLISAGLIKKURULUYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADLISAGLIKKURULUYOL">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_BOLUMLER">
+          <End Role="BOLUMLER" Type="HastaneArsivModel.Store.BOLUMLER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOLUMLER">
+              <PropertyRef Name="Bolumid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="BolumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_MUAYENEEPIKRIZ">
+          <End Role="MUAYENEEPIKRIZ" Type="HastaneArsivModel.Store.MUAYENEEPIKRIZ" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUAYENEEPIKRIZ">
+              <PropertyRef Name="Muayeneid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="MuayeneEpikrizID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_MUAYENEEPIKRIZYOL">
+          <End Role="MUAYENEEPIKRIZYOL" Type="HastaneArsivModel.Store.MUAYENEEPIKRIZYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUAYENEEPIKRIZYOL">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_OGRETIMUYELERİ">
+          <End Role="OGRETIMUYELERİ" Type="HastaneArsivModel.Store.OGRETIMUYELERİ" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OGRETIMUYELERİ">
+              <PropertyRef Name="OgretimUyeid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="OgretimUyeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_STATU">
+          <End Role="STATU" Type="HastaneArsivModel.Store.STATU" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STATU">
+              <PropertyRef Name="Statuid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="HastaStatuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_TANILAR1">
+          <End Role="TANILAR" Type="HastaneArsivModel.Store.TANILAR" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TANILAR">
+              <PropertyRef Name="Taniid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="TanıID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_TETKIKRAPORLAR">
+          <End Role="TETKIKRAPORLAR" Type="HastaneArsivModel.Store.TETKIKRAPORLAR" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TETKIKRAPORLAR">
+              <PropertyRef Name="TetkikRaporid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="TetkikRaporID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_YOLLAR">
+          <End Role="TETKIKRAPORYOL" Type="HastaneArsivModel.Store.TETKIKRAPORYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.Store.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TETKIKRAPORYOL">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL">
+          <End Role="MUAYENEEPIKRIZYOL" Type="HastaneArsivModel.Store.MUAYENEEPIKRIZYOL" Multiplicity="1" />
+          <End Role="MUAYENEEPIKRIZRESIMLER" Type="HastaneArsivModel.Store.MUAYENEEPIKRIZRESIMLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUAYENEEPIKRIZYOL">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Principal>
+            <Dependent Role="MUAYENEEPIKRIZRESIMLER">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESIMLER_YOLLAR">
+          <End Role="TETKIKRAPORYOL" Type="HastaneArsivModel.Store.TETKIKRAPORYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TETKIKRAPORRESIMLER" Type="HastaneArsivModel.Store.TETKIKRAPORRESIMLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TETKIKRAPORYOL">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Principal>
+            <Dependent Role="TETKIKRAPORRESIMLER">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HastaneArsivModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="HastaneArsivEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADLISAGLIKKURULUs" EntityType="HastaneArsivModel.ADLISAGLIKKURULU" />
+          <EntitySet Name="ADLISAGLIKKURULURESIMLERs" EntityType="HastaneArsivModel.ADLISAGLIKKURULURESIMLER" />
+          <EntitySet Name="ADLISAGLIKKURULUYOLs" EntityType="HastaneArsivModel.ADLISAGLIKKURULUYOL" />
+          <EntitySet Name="BOLUMLERs" EntityType="HastaneArsivModel.BOLUMLER" />
+          <EntitySet Name="DOSYALARs" EntityType="HastaneArsivModel.DOSYALAR" />
+          <EntitySet Name="HASTALARs" EntityType="HastaneArsivModel.HASTALAR" />
+          <EntitySet Name="MUAYENEEPIKRIZs" EntityType="HastaneArsivModel.MUAYENEEPIKRIZ" />
+          <EntitySet Name="MUAYENEEPIKRIZRESIMLERs" EntityType="HastaneArsivModel.MUAYENEEPIKRIZRESIMLER" />
+          <EntitySet Name="MUAYENEEPIKRIZYOLs" EntityType="HastaneArsivModel.MUAYENEEPIKRIZYOL" />
+          <EntitySet Name="OGRETIMUYELERİ" EntityType="HastaneArsivModel.OGRETIMUYELERİ" />
+          <EntitySet Name="OTURUMs" EntityType="HastaneArsivModel.OTURUM" />
+          <EntitySet Name="STATUs" EntityType="HastaneArsivModel.STATU" />
+          <EntitySet Name="TANILARs" EntityType="HastaneArsivModel.TANILAR" />
+          <EntitySet Name="TETKIKRAPORLARs" EntityType="HastaneArsivModel.TETKIKRAPORLAR" />
+          <EntitySet Name="TETKIKRAPORRESIMLERs" EntityType="HastaneArsivModel.TETKIKRAPORRESIMLER" />
+          <EntitySet Name="TETKIKRAPORYOLs" EntityType="HastaneArsivModel.TETKIKRAPORYOL" />
+          <AssociationSet Name="FK_DOSYALAR_ADLISAGLIKKURULU" Association="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULU">
+            <End Role="ADLISAGLIKKURULU" EntitySet="ADLISAGLIKKURULUs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL" Association="HastaneArsivModel.FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL">
+            <End Role="ADLISAGLIKKURULUYOL" EntitySet="ADLISAGLIKKURULUYOLs" />
+            <End Role="ADLISAGLIKKURULURESIMLER" EntitySet="ADLISAGLIKKURULURESIMLERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_ADLISAGLIKKURULUYOL" Association="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULUYOL">
+            <End Role="ADLISAGLIKKURULUYOL" EntitySet="ADLISAGLIKKURULUYOLs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_BOLUMLER" Association="HastaneArsivModel.FK_DOSYALAR_BOLUMLER">
+            <End Role="BOLUMLER" EntitySet="BOLUMLERs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_MUAYENEEPIKRIZ" Association="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZ">
+            <End Role="MUAYENEEPIKRIZ" EntitySet="MUAYENEEPIKRIZs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_MUAYENEEPIKRIZYOL" Association="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZYOL">
+            <End Role="MUAYENEEPIKRIZYOL" EntitySet="MUAYENEEPIKRIZYOLs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_OGRETIMUYELERİ" Association="HastaneArsivModel.FK_DOSYALAR_OGRETIMUYELERİ">
+            <End Role="OGRETIMUYELERİ" EntitySet="OGRETIMUYELERİ" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_STATU" Association="HastaneArsivModel.FK_DOSYALAR_STATU">
+            <End Role="STATU" EntitySet="STATUs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_TANILAR1" Association="HastaneArsivModel.FK_DOSYALAR_TANILAR1">
+            <End Role="TANILAR" EntitySet="TANILARs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_TETKIKRAPORLAR" Association="HastaneArsivModel.FK_DOSYALAR_TETKIKRAPORLAR">
+            <End Role="TETKIKRAPORLAR" EntitySet="TETKIKRAPORLARs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOSYALAR_YOLLAR" Association="HastaneArsivModel.FK_DOSYALAR_YOLLAR">
+            <End Role="TETKIKRAPORYOL" EntitySet="TETKIKRAPORYOLs" />
+            <End Role="DOSYALAR" EntitySet="DOSYALARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL" Association="HastaneArsivModel.FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL">
+            <End Role="MUAYENEEPIKRIZYOL" EntitySet="MUAYENEEPIKRIZYOLs" />
+            <End Role="MUAYENEEPIKRIZRESIMLER" EntitySet="MUAYENEEPIKRIZRESIMLERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESIMLER_YOLLAR" Association="HastaneArsivModel.FK_RESIMLER_YOLLAR">
+            <End Role="TETKIKRAPORYOL" EntitySet="TETKIKRAPORYOLs" />
+            <End Role="TETKIKRAPORRESIMLER" EntitySet="TETKIKRAPORRESIMLERs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ADLISAGLIKKURULU">
+          <Key>
+            <PropertyRef Name="AdliSaglikKuruluID" />
+          </Key>
+          <Property Name="AdliSaglikKuruluID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdliSaglikKurulu1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULU" FromRole="ADLISAGLIKKURULU" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="ADLISAGLIKKURULURESIMLER">
+          <Key>
+            <PropertyRef Name="AdliSaglikKuruluResimID" />
+          </Key>
+          <Property Name="AdliSaglikKuruluResimID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdliSaglikKuruluYolID" Type="Int32" Nullable="false" />
+          <Property Name="AdliSaglikKuruluResim" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ADLISAGLIKKURULUYOL" Relationship="HastaneArsivModel.FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL" FromRole="ADLISAGLIKKURULURESIMLER" ToRole="ADLISAGLIKKURULUYOL" />
+        </EntityType>
+        <EntityType Name="ADLISAGLIKKURULUYOL">
+          <Key>
+            <PropertyRef Name="AdliSaglikKuruluYolID" />
+          </Key>
+          <Property Name="AdliSaglikKuruluYolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdliSaglikKuruluYolKayit" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ADLISAGLIKKURULURESIMLERs" Relationship="HastaneArsivModel.FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL" FromRole="ADLISAGLIKKURULUYOL" ToRole="ADLISAGLIKKURULURESIMLER" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULUYOL" FromRole="ADLISAGLIKKURULUYOL" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="BOLUMLER">
+          <Key>
+            <PropertyRef Name="Bolumid" />
+          </Key>
+          <Property Name="Bolumid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BolumAdı" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_BOLUMLER" FromRole="BOLUMLER" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="DOSYALAR">
+          <Key>
+            <PropertyRef Name="DosyaID" />
+          </Key>
+          <Property Name="DosyaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DosyaNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="BolumID" Type="Int32" Nullable="false" />
+          <Property Name="Tarih" Type="DateTime" Nullable="false" />
+          <Property Name="OgretimUyeID" Type="Int32" Nullable="false" />
+          <Property Name="TanıID" Type="Int32" Nullable="false" />
+          <Property Name="HastaStatuID" Type="Int32" Nullable="false" />
+          <Property Name="MuayeneEpikrizID" Type="Int32" Nullable="false" />
+          <Property Name="MuayeneEpikrizYolID" Type="Int32" Nullable="false" />
+          <Property Name="TetkikRaporID" Type="Int32" Nullable="false" />
+          <Property Name="TetkikRaporYolID" Type="Int32" Nullable="false" />
+          <Property Name="AdliSaglikKuruluID" Type="Int32" Nullable="false" />
+          <Property Name="AdliSaglikKuruluYolID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ADLISAGLIKKURULU" Relationship="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULU" FromRole="DOSYALAR" ToRole="ADLISAGLIKKURULU" />
+          <NavigationProperty Name="ADLISAGLIKKURULUYOL" Relationship="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULUYOL" FromRole="DOSYALAR" ToRole="ADLISAGLIKKURULUYOL" />
+          <NavigationProperty Name="BOLUMLER" Relationship="HastaneArsivModel.FK_DOSYALAR_BOLUMLER" FromRole="DOSYALAR" ToRole="BOLUMLER" />
+          <NavigationProperty Name="MUAYENEEPIKRIZ" Relationship="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZ" FromRole="DOSYALAR" ToRole="MUAYENEEPIKRIZ" />
+          <NavigationProperty Name="MUAYENEEPIKRIZYOL" Relationship="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZYOL" FromRole="DOSYALAR" ToRole="MUAYENEEPIKRIZYOL" />
+          <NavigationProperty Name="OGRETIMUYELERİ" Relationship="HastaneArsivModel.FK_DOSYALAR_OGRETIMUYELERİ" FromRole="DOSYALAR" ToRole="OGRETIMUYELERİ" />
+          <NavigationProperty Name="STATU" Relationship="HastaneArsivModel.FK_DOSYALAR_STATU" FromRole="DOSYALAR" ToRole="STATU" />
+          <NavigationProperty Name="TANILAR" Relationship="HastaneArsivModel.FK_DOSYALAR_TANILAR1" FromRole="DOSYALAR" ToRole="TANILAR" />
+          <NavigationProperty Name="TETKIKRAPORLAR" Relationship="HastaneArsivModel.FK_DOSYALAR_TETKIKRAPORLAR" FromRole="DOSYALAR" ToRole="TETKIKRAPORLAR" />
+          <NavigationProperty Name="TETKIKRAPORYOL" Relationship="HastaneArsivModel.FK_DOSYALAR_YOLLAR" FromRole="DOSYALAR" ToRole="TETKIKRAPORYOL" />
+        </EntityType>
+        <EntityType Name="HASTALAR">
+          <Key>
+            <PropertyRef Name="TcKimlikNo" />
+          </Key>
+          <Property Name="TcKimlikNo" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="DosyaNumarası" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Ad" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Soyad" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MUAYENEEPIKRIZ">
+          <Key>
+            <PropertyRef Name="Muayeneid" />
+          </Key>
+          <Property Name="Muayeneid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HastaMuayeneEpikriz" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZ" FromRole="MUAYENEEPIKRIZ" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="MUAYENEEPIKRIZRESIMLER">
+          <Key>
+            <PropertyRef Name="MuayeneEpikrizResimID" />
+          </Key>
+          <Property Name="MuayeneEpikrizResimID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MuayeneEpikrizYolID" Type="Int32" Nullable="false" />
+          <Property Name="MuayeneRaporResimAd" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MUAYENEEPIKRIZYOL" Relationship="HastaneArsivModel.FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL" FromRole="MUAYENEEPIKRIZRESIMLER" ToRole="MUAYENEEPIKRIZYOL" />
+        </EntityType>
+        <EntityType Name="MUAYENEEPIKRIZYOL">
+          <Key>
+            <PropertyRef Name="MuayeneEpikrizYolID" />
+          </Key>
+          <Property Name="MuayeneEpikrizYolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MuayeneEpikrizYolKayit" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZYOL" FromRole="MUAYENEEPIKRIZYOL" ToRole="DOSYALAR" />
+          <NavigationProperty Name="MUAYENEEPIKRIZRESIMLERs" Relationship="HastaneArsivModel.FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL" FromRole="MUAYENEEPIKRIZYOL" ToRole="MUAYENEEPIKRIZRESIMLER" />
+        </EntityType>
+        <EntityType Name="OGRETIMUYELERİ">
+          <Key>
+            <PropertyRef Name="OgretimUyeid" />
+          </Key>
+          <Property Name="OgretimUyeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Soyad" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Unvan" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_OGRETIMUYELERİ" FromRole="OGRETIMUYELERİ" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="OTURUM">
+          <Key>
+            <PropertyRef Name="KullaniciAdi" />
+          </Key>
+          <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="STATU">
+          <Key>
+            <PropertyRef Name="Statuid" />
+          </Key>
+          <Property Name="Statuid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Statu1" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_STATU" FromRole="STATU" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="TANILAR">
+          <Key>
+            <PropertyRef Name="Taniid" />
+          </Key>
+          <Property Name="Taniid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaniAdi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ICD10Kodu" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_TANILAR1" FromRole="TANILAR" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="TETKIKRAPORLAR">
+          <Key>
+            <PropertyRef Name="TetkikRaporid" />
+          </Key>
+          <Property Name="TetkikRaporid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TetkikveRapor" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_TETKIKRAPORLAR" FromRole="TETKIKRAPORLAR" ToRole="DOSYALAR" />
+        </EntityType>
+        <EntityType Name="TETKIKRAPORRESIMLER">
+          <Key>
+            <PropertyRef Name="TetkikRaporResimID" />
+          </Key>
+          <Property Name="TetkikRaporResimID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TetkikRaporYolID" Type="Int32" Nullable="false" />
+          <Property Name="TetkikRaporResimAd" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TETKIKRAPORYOL" Relationship="HastaneArsivModel.FK_RESIMLER_YOLLAR" FromRole="TETKIKRAPORRESIMLER" ToRole="TETKIKRAPORYOL" />
+        </EntityType>
+        <EntityType Name="TETKIKRAPORYOL">
+          <Key>
+            <PropertyRef Name="TetkikRaporYolID" />
+          </Key>
+          <Property Name="TetkikRaporYolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TetkikRaporYolKayit" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DOSYALARs" Relationship="HastaneArsivModel.FK_DOSYALAR_YOLLAR" FromRole="TETKIKRAPORYOL" ToRole="DOSYALAR" />
+          <NavigationProperty Name="TETKIKRAPORRESIMLERs" Relationship="HastaneArsivModel.FK_RESIMLER_YOLLAR" FromRole="TETKIKRAPORYOL" ToRole="TETKIKRAPORRESIMLER" />
+        </EntityType>
+        <Association Name="FK_DOSYALAR_ADLISAGLIKKURULU">
+          <End Role="ADLISAGLIKKURULU" Type="HastaneArsivModel.ADLISAGLIKKURULU" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADLISAGLIKKURULU">
+              <PropertyRef Name="AdliSaglikKuruluID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="AdliSaglikKuruluID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL">
+          <End Role="ADLISAGLIKKURULUYOL" Type="HastaneArsivModel.ADLISAGLIKKURULUYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ADLISAGLIKKURULURESIMLER" Type="HastaneArsivModel.ADLISAGLIKKURULURESIMLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADLISAGLIKKURULUYOL">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Principal>
+            <Dependent Role="ADLISAGLIKKURULURESIMLER">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_ADLISAGLIKKURULUYOL">
+          <End Role="ADLISAGLIKKURULUYOL" Type="HastaneArsivModel.ADLISAGLIKKURULUYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADLISAGLIKKURULUYOL">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="AdliSaglikKuruluYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_BOLUMLER">
+          <End Role="BOLUMLER" Type="HastaneArsivModel.BOLUMLER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOLUMLER">
+              <PropertyRef Name="Bolumid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="BolumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_MUAYENEEPIKRIZ">
+          <End Role="MUAYENEEPIKRIZ" Type="HastaneArsivModel.MUAYENEEPIKRIZ" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUAYENEEPIKRIZ">
+              <PropertyRef Name="Muayeneid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="MuayeneEpikrizID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_MUAYENEEPIKRIZYOL">
+          <End Role="MUAYENEEPIKRIZYOL" Type="HastaneArsivModel.MUAYENEEPIKRIZYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUAYENEEPIKRIZYOL">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_OGRETIMUYELERİ">
+          <End Role="OGRETIMUYELERİ" Type="HastaneArsivModel.OGRETIMUYELERİ" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OGRETIMUYELERİ">
+              <PropertyRef Name="OgretimUyeid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="OgretimUyeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_STATU">
+          <End Role="STATU" Type="HastaneArsivModel.STATU" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STATU">
+              <PropertyRef Name="Statuid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="HastaStatuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_TANILAR1">
+          <End Role="TANILAR" Type="HastaneArsivModel.TANILAR" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TANILAR">
+              <PropertyRef Name="Taniid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="TanıID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_TETKIKRAPORLAR">
+          <End Role="TETKIKRAPORLAR" Type="HastaneArsivModel.TETKIKRAPORLAR" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TETKIKRAPORLAR">
+              <PropertyRef Name="TetkikRaporid" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="TetkikRaporID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOSYALAR_YOLLAR">
+          <End Role="TETKIKRAPORYOL" Type="HastaneArsivModel.TETKIKRAPORYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DOSYALAR" Type="HastaneArsivModel.DOSYALAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TETKIKRAPORYOL">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Principal>
+            <Dependent Role="DOSYALAR">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL">
+          <End Role="MUAYENEEPIKRIZYOL" Type="HastaneArsivModel.MUAYENEEPIKRIZYOL" Multiplicity="1" />
+          <End Role="MUAYENEEPIKRIZRESIMLER" Type="HastaneArsivModel.MUAYENEEPIKRIZRESIMLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUAYENEEPIKRIZYOL">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Principal>
+            <Dependent Role="MUAYENEEPIKRIZRESIMLER">
+              <PropertyRef Name="MuayeneEpikrizYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESIMLER_YOLLAR">
+          <End Role="TETKIKRAPORYOL" Type="HastaneArsivModel.TETKIKRAPORYOL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TETKIKRAPORRESIMLER" Type="HastaneArsivModel.TETKIKRAPORRESIMLER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TETKIKRAPORYOL">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Principal>
+            <Dependent Role="TETKIKRAPORRESIMLER">
+              <PropertyRef Name="TetkikRaporYolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HastaneArsivModelStoreContainer" CdmEntityContainer="HastaneArsivEntities">
+          <EntitySetMapping Name="ADLISAGLIKKURULUs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.ADLISAGLIKKURULU">
+              <MappingFragment StoreEntitySet="ADLISAGLIKKURULU">
+                <ScalarProperty Name="AdliSaglikKuruluID" ColumnName="AdliSaglikKuruluID" />
+                <ScalarProperty Name="AdliSaglikKurulu1" ColumnName="AdliSaglikKurulu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ADLISAGLIKKURULURESIMLERs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.ADLISAGLIKKURULURESIMLER">
+              <MappingFragment StoreEntitySet="ADLISAGLIKKURULURESIMLER">
+                <ScalarProperty Name="AdliSaglikKuruluResimID" ColumnName="AdliSaglikKuruluResimID" />
+                <ScalarProperty Name="AdliSaglikKuruluYolID" ColumnName="AdliSaglikKuruluYolID" />
+                <ScalarProperty Name="AdliSaglikKuruluResim" ColumnName="AdliSaglikKuruluResim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ADLISAGLIKKURULUYOLs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.ADLISAGLIKKURULUYOL">
+              <MappingFragment StoreEntitySet="ADLISAGLIKKURULUYOL">
+                <ScalarProperty Name="AdliSaglikKuruluYolID" ColumnName="AdliSaglikKuruluYolID" />
+                <ScalarProperty Name="AdliSaglikKuruluYolKayit" ColumnName="AdliSaglikKuruluYolKayit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOLUMLERs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.BOLUMLER">
+              <MappingFragment StoreEntitySet="BOLUMLER">
+                <ScalarProperty Name="Bolumid" ColumnName="Bolumid" />
+                <ScalarProperty Name="BolumAdı" ColumnName="BolumAdı" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOSYALARs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.DOSYALAR">
+              <MappingFragment StoreEntitySet="DOSYALAR">
+                <ScalarProperty Name="DosyaID" ColumnName="DosyaID" />
+                <ScalarProperty Name="DosyaNo" ColumnName="DosyaNo" />
+                <ScalarProperty Name="BolumID" ColumnName="BolumID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="OgretimUyeID" ColumnName="OgretimUyeID" />
+                <ScalarProperty Name="TanıID" ColumnName="TanıID" />
+                <ScalarProperty Name="HastaStatuID" ColumnName="HastaStatuID" />
+                <ScalarProperty Name="MuayeneEpikrizID" ColumnName="MuayeneEpikrizID" />
+                <ScalarProperty Name="MuayeneEpikrizYolID" ColumnName="MuayeneEpikrizYolID" />
+                <ScalarProperty Name="TetkikRaporID" ColumnName="TetkikRaporID" />
+                <ScalarProperty Name="TetkikRaporYolID" ColumnName="TetkikRaporYolID" />
+                <ScalarProperty Name="AdliSaglikKuruluID" ColumnName="AdliSaglikKuruluID" />
+                <ScalarProperty Name="AdliSaglikKuruluYolID" ColumnName="AdliSaglikKuruluYolID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HASTALARs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.HASTALAR">
+              <MappingFragment StoreEntitySet="HASTALAR">
+                <ScalarProperty Name="TcKimlikNo" ColumnName="TcKimlikNo" />
+                <ScalarProperty Name="DosyaNumarası" ColumnName="DosyaNumarası" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MUAYENEEPIKRIZs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.MUAYENEEPIKRIZ">
+              <MappingFragment StoreEntitySet="MUAYENEEPIKRIZ">
+                <ScalarProperty Name="Muayeneid" ColumnName="Muayeneid" />
+                <ScalarProperty Name="HastaMuayeneEpikriz" ColumnName="HastaMuayeneEpikriz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MUAYENEEPIKRIZRESIMLERs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.MUAYENEEPIKRIZRESIMLER">
+              <MappingFragment StoreEntitySet="MUAYENEEPIKRIZRESIMLER">
+                <ScalarProperty Name="MuayeneEpikrizResimID" ColumnName="MuayeneEpikrizResimID" />
+                <ScalarProperty Name="MuayeneEpikrizYolID" ColumnName="MuayeneEpikrizYolID" />
+                <ScalarProperty Name="MuayeneRaporResimAd" ColumnName="MuayeneRaporResimAd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MUAYENEEPIKRIZYOLs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.MUAYENEEPIKRIZYOL">
+              <MappingFragment StoreEntitySet="MUAYENEEPIKRIZYOL">
+                <ScalarProperty Name="MuayeneEpikrizYolID" ColumnName="MuayeneEpikrizYolID" />
+                <ScalarProperty Name="MuayeneEpikrizYolKayit" ColumnName="MuayeneEpikrizYolKayit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OGRETIMUYELERİ">
+            <EntityTypeMapping TypeName="HastaneArsivModel.OGRETIMUYELERİ">
+              <MappingFragment StoreEntitySet="OGRETIMUYELERİ">
+                <ScalarProperty Name="OgretimUyeid" ColumnName="OgretimUyeid" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTURUMs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.OTURUM">
+              <MappingFragment StoreEntitySet="OTURUM">
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STATUs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.STATU">
+              <MappingFragment StoreEntitySet="STATU">
+                <ScalarProperty Name="Statuid" ColumnName="Statuid" />
+                <ScalarProperty Name="Statu1" ColumnName="Statu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TANILARs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.TANILAR">
+              <MappingFragment StoreEntitySet="TANILAR">
+                <ScalarProperty Name="Taniid" ColumnName="Taniid" />
+                <ScalarProperty Name="TaniAdi" ColumnName="TaniAdi" />
+                <ScalarProperty Name="ICD10Kodu" ColumnName="ICD10Kodu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TETKIKRAPORLARs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.TETKIKRAPORLAR">
+              <MappingFragment StoreEntitySet="TETKIKRAPORLAR">
+                <ScalarProperty Name="TetkikRaporid" ColumnName="TetkikRaporid" />
+                <ScalarProperty Name="TetkikveRapor" ColumnName="TetkikveRapor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TETKIKRAPORRESIMLERs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.TETKIKRAPORRESIMLER">
+              <MappingFragment StoreEntitySet="TETKIKRAPORRESIMLER">
+                <ScalarProperty Name="TetkikRaporResimID" ColumnName="TetkikRaporResimID" />
+                <ScalarProperty Name="TetkikRaporYolID" ColumnName="TetkikRaporYolID" />
+                <ScalarProperty Name="TetkikRaporResimAd" ColumnName="TetkikRaporResimAd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TETKIKRAPORYOLs">
+            <EntityTypeMapping TypeName="HastaneArsivModel.TETKIKRAPORYOL">
+              <MappingFragment StoreEntitySet="TETKIKRAPORYOL">
+                <ScalarProperty Name="TetkikRaporYolID" ColumnName="TetkikRaporYolID" />
+                <ScalarProperty Name="TetkikRaporYolKayit" ColumnName="TetkikRaporYolKayit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="HastaneModel" ZoomLevel="55">
+        <EntityTypeShape EntityType="HastaneArsivModel.ADLISAGLIKKURULU" Width="1.5" PointX="3.75" PointY="7.5" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.ADLISAGLIKKURULURESIMLER" Width="1.5" PointX="3" PointY="4.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.ADLISAGLIKKURULUYOL" Width="1.5" PointX="0.75" PointY="4.375" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.BOLUMLER" Width="1.5" PointX="3.75" PointY="9.875" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.DOSYALAR" Width="1.5" PointX="6" PointY="2.5" Height="5.4417122395833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.HASTALAR" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.MUAYENEEPIKRIZ" Width="1.5" PointX="3.75" PointY="12.25" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.MUAYENEEPIKRIZRESIMLER" Width="1.5" PointX="6" PointY="14.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.MUAYENEEPIKRIZYOL" Width="1.5" PointX="3.75" PointY="14.625" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.OGRETIMUYELERİ" Width="1.5" PointX="3.75" PointY="17.125" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.OTURUM" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4033821614583353" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.STATU" Width="1.5" PointX="3.75" PointY="19.875" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.TANILAR" Width="1.5" PointX="3.75" PointY="22.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.TETKIKRAPORLAR" Width="1.5" PointX="3.75" PointY="24.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.TETKIKRAPORRESIMLER" Width="1.5" PointX="6" PointY="27.125" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneArsivModel.TETKIKRAPORYOL" Width="1.5" PointX="3.75" PointY="27.125" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULU" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="7.7208561197916659" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="7.7208561197916641" />
+          <ConnectorPoint PointX="5.989583333333333" PointY="7.7208561197916659" />
+          <ConnectorPoint PointX="6" PointY="7.7208561197916659" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_ADLISAGLIKKURULURESIMLER_ADLISAGLIKKURULUYOL" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.2689925130208328" />
+          <ConnectorPoint PointX="3" PointY="5.2689925130208328" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_ADLISAGLIKKURULUYOL" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="6.1629850260416656" />
+          <ConnectorPoint PointX="1.5" PointY="6.8002430130208324" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="6.8002430130208307" />
+          <ConnectorPoint PointX="5.989583333333333" PointY="6.8002430130208324" />
+          <ConnectorPoint PointX="6" PointY="6.8002430130208324" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_BOLUMLER" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="10.672841796875" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="10.672841796874998" />
+          <ConnectorPoint PointX="5.989583333333333" PointY="10.672841796875" />
+          <ConnectorPoint PointX="6.2604141666666671" PointY="10.672841796875" />
+          <ConnectorPoint PointX="6.4270808333333331" PointY="10.672841796875" />
+          <ConnectorPoint PointX="6.75" PointY="10.672841796875" />
+          <ConnectorPoint PointX="6.75" PointY="7.9417122395833317" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZ" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="13.047841796875" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="13.047841796874998" />
+          <ConnectorPoint PointX="5.989583333333333" PointY="13.047841796875" />
+          <ConnectorPoint PointX="6.3437475" PointY="13.047841796875" />
+          <ConnectorPoint PointX="6.3437475" PointY="7.9417122395833317" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_MUAYENEEPIKRIZYOL" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="14.626152846153847" />
+          <ConnectorPoint PointX="5.625" PointY="14.251152846153847" />
+          <ConnectorPoint PointX="5.625" PointY="4.6188695065104159" />
+          <ConnectorPoint PointX="5.651041666666667" PointY="4.6188695065104151" />
+          <ConnectorPoint PointX="5.817708333333333" PointY="4.6188695065104159" />
+          <ConnectorPoint PointX="6" PointY="4.6188695065104159" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_OGRETIMUYELERİ" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="17.188460538461534" />
+          <ConnectorPoint PointX="5.59732443490112" PointY="16.841136103560412" />
+          <ConnectorPoint PointX="5.7933005650988791" PointY="16.645159973362656" />
+          <ConnectorPoint PointX="5.8125" PointY="16.625960538461534" />
+          <ConnectorPoint PointX="5.8125" PointY="5.7095562597656242" />
+          <ConnectorPoint PointX="6" PointY="5.7095562597656242" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_STATU" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="19.938460538461534" />
+          <ConnectorPoint PointX="5.6875" PointY="19.500960538461534" />
+          <ConnectorPoint PointX="5.6875" PointY="3.5281827532552072" />
+          <ConnectorPoint PointX="6" PointY="3.5281827532552072" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_TANILAR1" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="22.282306692307689" />
+          <ConnectorPoint PointX="5.59732443490112" PointY="21.934982257406567" />
+          <ConnectorPoint PointX="5.7933005650988791" PointY="21.73900612720881" />
+          <ConnectorPoint PointX="5.90625" PointY="21.626056692307689" />
+          <ConnectorPoint PointX="5.90625" PointY="6.2548996363932279" />
+          <ConnectorPoint PointX="6" PointY="6.2548996363932279" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_TETKIKRAPORLAR" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="24.782306692307689" />
+          <ConnectorPoint PointX="5.65625" PointY="24.376056692307689" />
+          <ConnectorPoint PointX="5.65625" PointY="5.1642128831380205" />
+          <ConnectorPoint PointX="6" PointY="5.1642128831380205" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_DOSYALAR_YOLLAR" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="27.141152846153844" />
+          <ConnectorPoint PointX="5.734375" PointY="26.656777846153844" />
+          <ConnectorPoint PointX="5.734375" PointY="4.0735261298828114" />
+          <ConnectorPoint PointX="6" PointY="4.0735261298828114" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_MUAYENEEPIKRIZRESIMLER_MUAYENEEPIKRIZYOL" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="15.550821436097758" />
+          <ConnectorPoint PointX="5.572916666666667" PointY="15.550821436097756" />
+          <ConnectorPoint PointX="5.989583333333333" PointY="15.550821436097758" />
+          <ConnectorPoint PointX="6" PointY="15.550821436097758" />
+        </AssociationConnector>
+        <AssociationConnector Association="HastaneArsivModel.FK_RESIMLER_YOLLAR" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="28.058321436097756" />
+          <ConnectorPoint PointX="6" PointY="28.058321436097756" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
