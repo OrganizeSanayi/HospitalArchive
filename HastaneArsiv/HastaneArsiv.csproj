@@ -71,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HastaneModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OgretimUyesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OgretimUyesi.resx">
       <DependentUpon>OgretimUyesi.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HastaneModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +185,7 @@
   <ItemGroup>
     <None Include="Resources\folder_256.png" />
     <None Include="Resources\icd10codes.png" />
+    <None Include="Resources\logo.png" />
     <Content Include="Scanner\Interop.WIA.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
